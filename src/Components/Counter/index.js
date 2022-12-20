@@ -10,22 +10,24 @@ export default class Counter extends Component {
 
     increment =() =>{
         this.setState(prevState=>({counter : prevState.counter + parseInt(this.state.value)}))
-        this.props.getTotal(this.state.value)
+        this.props.updateTotal(this.state.value)
     }
 
     decrement = ()=>{
         if(this.state.counter > 0){
         this.setState(prevState=>({counter: prevState.counter - parseInt(this.state.value)}))
-        this.props.getTotal(-this.state.value)
+        this.props.updateTotal(-this.state.value)
         }
     }
   render() {
     return (
       <div className='counter'>
         <p>{this.state.counter}</p>
+        <div>
         <button onClick={this.decrement} className='decrement' >-</button>
         <button onClick={this.increment} className='increment' >+</button>
-      </div>
+        </div>
+        </div>
     )
   }
 }
