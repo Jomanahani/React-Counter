@@ -1,16 +1,16 @@
 .counter{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 16rem;
 }
 .counter p{
     padding: 1rem;
-    margin: 0 1rem;
 }
 button {
     width: 4.5rem;
     height: 4rem;
     font-size: 2rem;
-    /* padding: 0.8rem 1.8rem; */
     margin: 0.4rem;
     border: none;
     color: white;
